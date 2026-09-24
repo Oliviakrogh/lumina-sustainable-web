@@ -319,24 +319,44 @@ footer {
     color: black;
     font-family: var(--brødtekst-font);
 }
-footer table { width: 100%; 
-  border-collapse: collapse; 
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    gap: 40px;
 }
-footer .col { 
-    vertical-align: top;
-    padding-right: 40px; }
-footer h2.logo {
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+footer .logo {
     font-size: 24px; 
     letter-spacing: 2px; 
     margin-bottom: 15px; 
   }
-footer h3 { 
+footer h2 { 
     font-size: 14px; 
     margin-bottom: 10px; 
     letter-spacing: 1px; }
+
 footer p { 
     font-size: 13px; 
     line-height: 1.8; 
+}
+
+footer ul { 
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+footer li { 
+    font-size: 13px; 
+    line-height: 1.8;
 }
 footer a { 
     color: black; 
