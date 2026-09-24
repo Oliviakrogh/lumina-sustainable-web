@@ -293,15 +293,105 @@ html { scroll-behavior: smooth; }
     color: #40382e;
 }
 
-/* Andre sektioner */
+/* Specifikationer */
 .specs { 
     min-height: 100vh;
-    background: url('../img/futtemus.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: var(--farve1);
+    padding: 80px 8%;
 }
+
+.specs h2 {
+    font-family: krona one;
+    font-size: 40px;
+    color: #40382e;
+    letter-spacing: 8px;
+    margin-bottom: 50px;
+}
+
+.spec-group {
+    border-bottom: 1px solid #40382e;
+}
+
+.spec-group summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    cursor: pointer;
+    list-style: none;
+}
+
+.spec-group summary {
+    transition: opacity 0.2s ease;
+}
+
+.spec-group summary:hover {
+    opacity: 0.65;
+}
+
+.spec-group summary ::marker {
+    display: none;
+}
+
+.spec-group summary span:first-child {
+    font-family: krona one;
+    font-size: 18px;
+    color: #40382e;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.spec-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mere-knap,
+.mindre-knap {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.mindre-knap {
+    display: none;
+}
+
+.spec-group[open] .mere-knap {
+    display: none;
+}
+
+.spec-group[open] .mindre-knap {
+    display: block;
+}
+
+.spec-content {
+
+    padding: 0 0 30px 0;
+
+}
+
+.spec-content p {
+    font-family: inria sans;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #40382e;
+    margin: 0 0 16px;
+}
+
+.spec-content p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+.specs-img {
+    display: block;
+    width: 700px;
+    height: auto;
+    margin: 10px auto 0;
+}
+
 .app { 
     min-height: 100vh;
     background: url('../img/diskus.png');
