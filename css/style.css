@@ -296,12 +296,12 @@ html { scroll-behavior: smooth; }
 /* Specifikationer */
 .specs { 
     min-height: 100vh;
-    padding: 80px 8%;
+    padding: 80px 15%;
 }
 
 .specs h2 {
     font-family: krona one;
-    font-size: 40px;
+    font-size: 30px;
     color: #40382e;
     letter-spacing: 8px;
     margin-bottom: 50px;
@@ -389,7 +389,7 @@ html { scroll-behavior: smooth; }
     display: block;
     width: 700px;
     height: auto;
-    margin: 10px auto 0;
+    margin: -60px auto 0;
 }
 
 .app { 
