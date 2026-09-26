@@ -191,35 +191,62 @@ html { scroll-behavior: smooth; }
 
 /* FARVEVÆLGER MED STREGER */
 .color-selector {
-    border-top: 2px solid #40382e;
-    border-bottom: 2px solid #40382e;
-    padding: 15px 0;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    border: none;
+    padding: 0;
     margin: 20px 0;
-    width: 100%;
+}
+
+.color-selector legend {
+    font-family: inria sans;
+    font-size: 16px;
+    color: #40382e;
+    margin-bottom: 15px;
 }
 
 .colors {
     display: flex;
-    gap: 1rem;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    gap: 15px;
 }
-.colors li {
-    width: 35px;
-    height: 35px;
+
+.color-option {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
+    border: 1px solid #40382e;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    
+    position: relative;
+    display: flex;
+}
+
+.color-option span{
+    font-family: inria sans;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #000;
+}
+
+.color-option input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.color-option:has(input:checked) {
+    border: 2.5px solid #40382e;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+    transition: 0.3s ease;
 }
 
 /* Farver */
 .moonlight-white { 
     background-color: #F0E0C7; 
-    border: 3px solid #40382e; 
+    border: 1px solid #40382e; 
 }
 .lavender-mist   { 
     background-color: #D3D3FF; 
@@ -234,10 +261,9 @@ html { scroll-behavior: smooth; }
     border: 1px solid black;
    }
 
-.color-name {
-    font-size: 18px;
-    font-family: var(--brødtekst-font);
-    color: #40382e;
+.color-option:has(input:focus-visible) {
+    outline: 3px solid #40382e;
+    outline-offset: 4px;
 }
 
 /* Placering af tekstblok */
