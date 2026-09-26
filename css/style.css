@@ -92,6 +92,7 @@ html { scroll-behavior: smooth; }
 /* Hero indhold */
 .hero-content {
     position: relative;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,13 +113,13 @@ html { scroll-behavior: smooth; }
 }
 
 .lum { 
-   left: 58%;
-   transform: translate(-130%, -50%); 
+   left: 60%;
+   transform: translate(-125%, -50%); 
    z-index: 1; 
    letter-spacing: 40px; }
 .ina { 
     left: 45%; 
-    transform: translate(30%, -50%);
+    transform: translate(32%, -50%);
     z-index: 3; 
     letter-spacing: 40px; }
 
@@ -126,18 +127,16 @@ html { scroll-behavior: smooth; }
     width: 500px;
     height: auto;
     position: relative;
-    top: 50%;
-    left: 15%;
-    transform: translate(-55%, -20%);
     z-index: 2;
+    transform: translateY(-130px);
 }
 
 /* Knap */
 .knap1 {
     position: absolute;
-    bottom: 10%;
+    bottom: 20%;
     left: 80%;
-    transform: translateX(-50%);
+    transform: translateX(-40%);
     padding: 15px 40px;
     border: none;
     border-radius: 30px;
@@ -157,10 +156,11 @@ html { scroll-behavior: smooth; }
 .produkt { 
     background: #ffffff; 
     display: flex;
-    justify-content: flex-end; 
+    justify-content: space-between; 
     align-items: center;       
-    height: 100vh;             
+    min-height: 100vh;             
     margin: 0;
+    padding: 0 8%
 }
 
 .product-title {
@@ -271,18 +271,15 @@ html { scroll-behavior: smooth; }
 
 /* Placering af tekstblok */
 .produktinfo {
-    position: absolute;
     z-index: 10;
     width: 400px;
-    left: 5%;
-    top: 130%;
 }
 
 /* Knap: LÆG I KURV */
 .buy {
-    position: absolute;
-    bottom: -40%;
-    left: 0%;
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
     padding: 15px 40px;
     border: none;
     border-radius: 40px;
@@ -293,31 +290,34 @@ html { scroll-behavior: smooth; }
     cursor: pointer;
     width: 200px;
 }
-.buy:hover { transform: translateX(-150%) scale(1.05); }
+.buy:hover { 
+    transform: scale(1.05); }
 
 /* Billeder */
+.produkt-visual {
+    position: relative;
+    width: 550px;
+    flex-shrink: 0;
+}
+
 .trefarver {
     position: absolute;
     z-index: 0;
-    width: 550px;
-    left: 55%;
-    top: 135%;
+    width: 100%;
+    left: 0;
+    top: 240px;
 }
 .billede {
-    position: absolute;
-    top: 110%;
-    left: 55%;
+    position: relative;
     z-index: 10;
-    width: 550px;
+    width: 100%;
     height: auto;
 }
 .pris {
-    position: absolute;
-    bottom: -15%;
-    left: 0%;
     font-family: var(--brødtekst-font);
     font-size: 24px;
     color: #40382e;
+    margin-top: 20px;
 }
 
 /* Specifikationer */
@@ -483,3 +483,18 @@ footer a:hover {
     text-decoration: underline;
  }
 .mail { color: rgb(47, 39, 152); }
+
+
+
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+    .produkt {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 20px;
+        gap: 40px;
+    }
+}
