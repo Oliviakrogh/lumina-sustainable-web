@@ -419,13 +419,98 @@ html { scroll-behavior: smooth; }
     margin: -60px auto 0;
 }
 
+/* App sektion */
 .app { 
     min-height: 100vh;
-    background: url('../img/diskus.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
     background-color: white;
+    padding: 10px 8% 80px;
+}
+
+.app > h2 {
+    font-family: var(--overskrift-font);
+    font-size: 60px;
+    color: #40382e;
+    margin-bottom: 10px;
+    margin-left: 120px;
+}
+
+.app-content {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    align-items: center;
+    column-gap: 0;
+}
+
+.app-info {
+    background-color: #7d746d;
+    color: white;
+    padding: 40px 50px;
+    border-radius: 80px 0 0 80px;
+    width: 650px;
+    z-index: 1;
+    transform: translate(300px, 100px);
+}
+
+.app-info h3 {
+    font-family: var(--brødtekst-font);
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.app-info p,
+.app-info li {
+    font-family: var(--brødtekst-font);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.app-info ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.app-phone {
+    display: block;
+    width: 350px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.app-download {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.app-download h3 {
+    font-family: var(--brødtekst-font);
+    font-size: 24px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.download-button {
+    display: inline-block;
+    width: 200px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    background: white;
+    color: #40382e;
+    font-family: var(--brødtekst-font);
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.download-buttons {
+    display: flex;
+    gap: 15px;
 }
 
 /* Footer */
