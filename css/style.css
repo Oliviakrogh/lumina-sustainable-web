@@ -206,6 +206,9 @@ html { scroll-behavior: smooth; }
 .colors {
     display: flex;
     gap: 15px;
+    border-top: 2px solid #40382e;
+    border-bottom: 2px solid #40382e;
+    padding: 10px 0;
 }
 
 .color-option {
@@ -279,8 +282,7 @@ html { scroll-behavior: smooth; }
 .buy {
     position: absolute;
     bottom: -40%;
-    left: 80%;
-    transform: translateX(-150%);
+    left: 0%;
     padding: 15px 40px;
     border: none;
     border-radius: 40px;
@@ -289,7 +291,6 @@ html { scroll-behavior: smooth; }
     font-family: var(--brødtekst-font);
     font-size: 16px;
     cursor: pointer;
-    transition: 0.3s ease;
     width: 200px;
 }
 .buy:hover { transform: translateX(-150%) scale(1.05); }
@@ -313,7 +314,7 @@ html { scroll-behavior: smooth; }
 .pris {
     position: absolute;
     bottom: -15%;
-    left: 5%;
+    left: 0%;
     font-family: var(--brødtekst-font);
     font-size: 24px;
     color: #40382e;
