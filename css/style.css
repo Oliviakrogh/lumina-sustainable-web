@@ -593,13 +593,7 @@ footer a:hover {
 
 
 @media (max-width: 600px) {
-    .produkt {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 80px 20px;
-        gap: 40px;
-    }
+    
     #logo1 {
     font-size: 28px;
     letter-spacing: 3px;
@@ -654,5 +648,85 @@ footer a:hover {
 
     .nav-links.open {
     display: flex;
+    }
+
+    .hero-img {
+    width: 280px;
+    max-width: 80vw;
+    height: auto;
+    transform: translateY(-190px);
+    }
+
+    .hovedskrift {
+    font-size: 3.5rem;
+    top: 38%;
+    letter-spacing: 10px;
+    }
+
+    .lum {
+    left: 50%;
+    transform: translate(-91%, -50%);
+    letter-spacing: 10px;
+    z-index: 3;
+    }
+
+    .ina {
+        left: 50%;
+        transform: translate(10%, -50%);
+        letter-spacing: 10px;
+        z-index: 3;
+    }
+
+    .knap1 {
+    bottom: 27%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 14px 32px;
+    font-size: 20px;
+    }
+
+    .produkt {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 20px 80px;
+        gap: 40px;
+    }
+
+    .produktinfo {
+    width: 100%;
+    }
+
+    .produkt-visual {
+        width: 100%;
+        max-width: 350px;
+        transform: translateY(-50px);
+    }
+
+    .trefarver {
+    top: 140px;
+    }
+
+    .specs {
+    min-height: auto;
+    padding: 0px 20px 60px;
+    }
+
+    .specs h2 {
+        font-size: 22px;
+        letter-spacing: 4px;
+        margin-bottom: 30px;
+    }
+
+    .spec-group summary span:first-child {
+    font-size: 15px;
+    letter-spacing: 1px;
+    }
+
+    .specs-img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: -20px auto 0;
     }
 }
