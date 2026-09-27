@@ -216,28 +216,30 @@
 <section class="app" id="app">
     <h2>HENT APPEN</h2>
     <div class="app-content">
-      <div class="app-info">
-        <h3>LUMINA App</h3>
-        <p>Med appen styrer du nemt det hele fra telefonen:</p>
-        <ul>
-          <li><strong>Musik:</strong> Skift sange og skru op eller ned.</li>
-          <li><strong>Lys:</strong> Vælg stemning med ét tryk.</li>
-          <li><strong>Fællesfest:</strong> Sæt dine og vennernes playlister sammen.</li>
-        </ul>
-      </div>
-      <img
-        src="img/iPhone.png"
-        alt="Lumina App vist på en iPhone"
-        class="app-phone"
-      >
-      <div class="app-download">
-            <h3>Download til:</h3>
+      <div class="app-left">
+            <div class="app-info">
+              <h3>LUMINA App</h3>
+              <p>Med appen styrer du nemt det hele fra telefonen:</p>
+              <ul>
+                <li><strong>Musik:</strong> Skift sange og skru op eller ned.</li>
+                <li><strong>Lys:</strong> Vælg stemning med ét tryk.</li>
+                <li><strong>Fællesfest:</strong> Sæt dine og vennernes playlister sammen.</li>
+              </ul>
+            </div>
+            <div class="app-download">
+                  <h3>Download til:</h3>
 
-            <div class="download-buttons">
-                <a href="#" class="download-button">Hent til iOS</a>
-                <a href="#" class="download-button">Hent til Android</a>
+                  <div class="download-buttons">
+                      <a href="#" class="download-button">Hent til iOS</a>
+                      <a href="#" class="download-button">Hent til Android</a>
+                  </div>
             </div>
       </div>
+        <img
+          src="img/iPhone.png"
+          alt="Lumina App vist på en iPhone"
+          class="app-phone"
+        >
     </div>
 </section>
 
@@ -245,19 +247,23 @@
 <footer>
   <div class="footer-content">
 
-    <div class="footer-column">
-      <p class="logo">LUMINA<br>AUDIO</p>
+    <div class="footer-column footer-brand">
+      <div class="footer-logo">
+          <span class="footer-logo-lumina">LUMINA</span>
+          <span class="footer-logo-audio">AUDIO</span>
+      </div>
       <p>
-        © 2025 Lumina Audio.<br>
-        Alle rettigheder forbeholdes.<br><br>
         Designet i Skandinavien.<br>
         Inspireret af minimalisme.<br>
         Skabt til stemning.
       </p>
     </div>
 
-    <div class="footer-column">
-      <h2>KONTAKT</h2>
+    <details class="footer-column" open>
+      <summary>
+        <span>KONTAKT</span>
+        <span class="footer-toggle" aria-hidden="true">+</span>
+      </summary>
       <ul>
         <li><a href="#">Kundeservice</a></li>
         <li><a href="#">Find os</a></li>
@@ -272,20 +278,26 @@
         </a><br>
         +45 12 34 56 78
       </p>
-    </div>
+    </details>
 
-    <div class="footer-column">
-      <h2>SERVICE</h2>
+    <details class="footer-column" open>
+      <summary>
+        <span>SERVICE</span>
+        <span class="footer-toggle" aria-hidden="true">+</span>
+      </summary>
       <ul>
         <li><a href="#">Levering & retur</a></li>
         <li><a href="#">Garanti & reparation</a></li>
         <li><a href="#">FAQ</a></li>
         <li><a href="#">Brugervejledning</a></li>
       </ul>
-    </div>
+    </details>
 
-   <div class="footer-column">
-      <h2>OM OS</h2>
+   <details class="footer-column" open>
+      <summary>
+        <span>OM OS</span>
+        <span class="footer-toggle" aria-hidden="true">+</span>
+      </summary>
       <ul>
         <li><a href="#">Om Lumina Audio</a></li>
         <li><a href="#">Vores historie</a></li>
@@ -293,17 +305,25 @@
         <li><a href="#">Bæredygtighed</a></li>
         <li><a href="#">Presse</a></li>
       </ul>
-    </div>
+    </details>
 
-   <div class="footer-column">
-      <h2>FØLG OS</h2>
+   <details class="footer-column" open>
+      <summary>
+        <span>FØLG OS</span>
+        <span class="footer-toggle" aria-hidden="true">+</span>
+      </summary>
       <ul>
         <li><a href="#">Instagram</a></li>
         <li><a href="#">Facebook</a></li>
         <li><a href="#">TikTok</a></li>
         <li><a href="#">LinkedIn</a></li>
       </ul>
-    </div>
+    </details>
+
+    <p class="footer-copyright">
+       © 2025 Lumina Audio.<br>
+        Alle rettigheder forbeholdes.
+    </p>
 
   </div>
 </footer>

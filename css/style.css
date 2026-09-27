@@ -455,13 +455,7 @@ html { scroll-behavior: smooth; }
 }
 
 .app-info {
-    background-color: #7d746d;
     color: white;
-    padding: 40px 50px;
-    border-radius: 80px 0 0 80px;
-    width: 650px;
-    z-index: 1;
-    transform: translate(300px, 100px);
 }
 
 .app-info h3 {
@@ -505,6 +499,18 @@ html { scroll-behavior: smooth; }
     font-size: 24px;
     color: white;
     margin-bottom: 5px;
+}
+
+.app-left {
+    display: flex;
+    flex-direction: column;
+    background-color: #7d746d;
+    color: white;
+    padding: 40px 50px;
+    border-radius: 80px 0 0 80px;
+    width: 650px;
+    z-index: 1;
+    transform: translate(300px,100px);
 }
 
 .download-button {
@@ -582,8 +588,50 @@ footer a:hover {
  }
 .mail { color: rgb(47, 39, 152); }
 
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.footer-logo-lumina {
+    font-family: var(--logo-font);
+    font-size: 28px;
+    font-weight: 200;
+    letter-spacing: 3px;
+    color: var(--font-farve);
+}
+
+.footer-logo-audio {
+    font-family: var(--brødtekst-font);
+    font-size: 16px;
+    letter-spacing: 8px;
+    color: var(--font-farve);
+}
+
+.footer-column summary {
+    list-style: none;
+    cursor: default;
+    pointer-events: none;
+}
+
+.footer-column summary::-webkit-details-marker {
+    display: none;
+}
+
+.footer-toggle {
+    display: none;
+}
 
 
+.footer-copyright {
+    grid-column: 1 / -1;
+    text-align: center;
+    width: 100%;
+    margin-top: 0px;
+}
 
 /* Media Queries */
 
@@ -749,20 +797,25 @@ footer a:hover {
     }
 
     .app-info {
-    width: 98%;
-    margin: 0;
-    transform: none;
-    padding: 30px 25px;
-    border-radius: 40px;
-    grid-column: 1 / -1;
+        background-color: #7d746d;
+        width: 98%;
+        margin: 0;
+        transform: none;
+        padding: 30px 25px;
+        border-radius: 40px;
+        grid-column: 1 / -1;
+    }
+
+    .app-left {
+        display: contents;
     }
 
     .app-phone {
-    width: 200px;
-    max-width: 70vw;
-    height: auto;
-    margin: 0;
-    transform: translateX(-20px);
+        width: 200px;
+        max-width: 70vw;
+        height: auto;
+        margin: 0;
+        transform: translateX(-20px);
     }
 
     .app-download {
@@ -792,5 +845,72 @@ footer a:hover {
         letter-spacing: 1px;
         background-color: #40382e;
         color: white;
+    }
+
+    footer {
+        padding: 40px 20px;
+        min-height: auto;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .footer-column summary {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--font-farve);
+        cursor: pointer;
+        list-style: none;
+        pointer-events: auto;
+    }
+
+    .footer-column summary::-webkit-details-marker {
+        display: none;
+    }
+
+    .footer-column summary span:first-child {
+        font-family: var(--brødtekst-font);
+        font-size: 14px;
+    }
+
+    .footer-toggle {
+        font-size: 24px;
+        font-weight: 300;
+        display: inline;
+    }
+
+    .footer-column[open] .footer-toggle {
+        font-size: 0;
+    }
+
+    .footer-column[open] .footer-toggle::after {
+        content: "−";
+        font-size: 24px;
+    }
+
+    .footer-brand {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-description {
+        text-align: center;
+    }
+
+
+    .footer-brand .logo {
+        text-align: center;
+        margin-bottom: 20px;
+        order: 0;
+    }
+
+    .footer-logo {
+        align-items: center;
     }
 }
