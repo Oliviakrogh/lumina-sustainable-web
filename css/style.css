@@ -729,4 +729,68 @@ footer a:hover {
     height: auto;
     margin: -20px auto 0;
     }
+
+    .app {
+    min-height: auto;
+    padding: 40px 20px 60px;
+    }
+
+    .app > h2 {
+        font-size: 36px;
+        margin-left: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .app-content {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 20px;
+        align-items: center;
+    }
+
+    .app-info {
+    width: 98%;
+    margin: 0;
+    transform: none;
+    padding: 30px 25px;
+    border-radius: 40px;
+    grid-column: 1 / -1;
+    }
+
+    .app-phone {
+    width: 200px;
+    max-width: 70vw;
+    height: auto;
+    margin: 0;
+    transform: translateX(-20px);
+    }
+
+    .app-download {
+    margin-top: 0;
+    align-items: flex-start;
+    gap: 10px;
+    transform: translateX(-10px);
+    }
+
+    .app-download h3 {
+        font-size: 18px;
+        color: #40382e;
+        margin-bottom: 5px;
+        width: 140px;
+        text-align: center;
+    }
+
+    .download-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .download-button {
+        width: 140px;
+        padding: 10px 15px;
+        font-size: 13px;
+        letter-spacing: 1px;
+        background-color: #40382e;
+        color: white;
+    }
 }
