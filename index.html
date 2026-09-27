@@ -17,12 +17,30 @@
         <p id="logo1">LUMINA</p>
         <p id="logo2">AUDIO</p>
       </div>
-      <ul class="nav-links">
-        <li><a href="#produktus">PRODUKT</a></li>
-        <li><a href="#specs">SPECIFIKATIONER</a></li>
-        <li><a href="#app">APP</a></li>
-        <li><a href="tak.html"><img src="img/cart.svg" alt="Kurv" class="cart"></a></li>
-      </ul>
+
+        <div class="nav-actions">
+
+          <button class="menu-toggle"
+                  type="button"
+                  aria-label="Åbn menu"
+                  aria-expanded="false"
+                  aria-controls="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+           <a href="tak.html" class="cart-link">
+            <img src="img/cart.svg" alt="Kurv" class="cart">
+          </a>
+
+        </div>
+
+        <ul class="nav-links" id="mobile-menu">
+          <li><a href="#produktus">PRODUKT</a></li>
+          <li><a href="#specs">SPECIFIKATIONER</a></li>
+          <li><a href="#app">APP</a></li>
+        </ul>
     </nav>
   </header>
 
@@ -292,5 +310,6 @@
   </div>
 </footer>
 
+<script src="js/script.js"></script>
 </body>
 </html>

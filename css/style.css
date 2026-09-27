@@ -42,13 +42,24 @@ html { scroll-behavior: smooth; }
     top: 0;
     left: 0;
     z-index: 15;
-    background: transparent;
+    background-color: rgba(236, 213, 195, 0.40);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: 30px;
+    order: 3;
 }
 
 .logo {
     display: flex;
     flex-direction: column;
     line-height: 1;
+    order: 1;
 }
 
 #logo1 {
@@ -71,6 +82,8 @@ html { scroll-behavior: smooth; }
     display: flex;
     gap: 30px;
     align-items: center;
+    margin-left: auto;
+    order: 2;
 }
 
 .nav-links a {
@@ -574,6 +587,11 @@ footer a:hover {
 
 /* Media Queries */
 
+.menu-toggle {
+    display: none;
+}
+
+
 @media (max-width: 600px) {
     .produkt {
         flex-direction: column;
@@ -581,5 +599,60 @@ footer a:hover {
         align-items: center;
         padding: 80px 20px;
         gap: 40px;
+    }
+    #logo1 {
+    font-size: 28px;
+    letter-spacing: 3px;
+    }
+
+    #logo2 {
+        font-size: 16px;
+        letter-spacing: 8px;
+    }
+
+    .navbar {
+        padding: 15px 20px;
+    }
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+    }
+    .menu-toggle span {
+        display: block;
+        width: 26px;
+        height: 2px;
+        background-color: var(--font-farve);
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        padding: 30px 20px;
+        background-color: rgba(236, 213, 195, 0.40);
+        backdrop-filter: blur(10px);                        
+        -webkit-backdrop-filter: blur(10px);
+        order: 3;
+        margin-left: 0;
+    }
+
+    .nav-actions {
+        order: 2;
+        margin-left: auto;
+    }
+
+    .nav-links.open {
+    display: flex;
     }
 }
