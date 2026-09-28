@@ -1,5 +1,4 @@
 /* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Koulen&family=Krona+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap");
 
@@ -31,7 +30,6 @@ html { scroll-behavior: smooth; }
 }
 
 /* Navbar */
-/*præsenter dette også*/
 .navbar {
     width: 100%;
     padding: 20px 50px;
@@ -114,7 +112,6 @@ html { scroll-behavior: smooth; }
     z-index: 1;
 }
 
-/* Præsenter dette hero section */
 .hovedskrift {
     font-family: var(--overskrift-font);
     font-size: 12rem;
@@ -162,7 +159,6 @@ html { scroll-behavior: smooth; }
 }
 .knap1:hover { transform: translateX(-50%) scale(1.05); }
 
-/*præsentation af hero færdig*/
 
 
 /* Produkt sektion */
@@ -172,7 +168,6 @@ html { scroll-behavior: smooth; }
     justify-content: space-between; 
     align-items: center;       
     min-height: 100vh;             
-    margin: 0;
     padding: 0 8%
 }
 
@@ -210,7 +205,7 @@ html { scroll-behavior: smooth; }
 }
 
 .color-selector legend {
-    font-family: inria sans;
+    font-family: var(--brødtekst-font);
     font-size: 16px;
     color: #40382e;
     margin-bottom: 15px;
@@ -237,7 +232,7 @@ html { scroll-behavior: smooth; }
 }
 
 .color-option span{
-    font-family: inria sans;
+    font-family: var(--brødtekst-font);
     font-size: 10px;
     letter-spacing: 3px;
     color: #000;
@@ -266,15 +261,15 @@ html { scroll-behavior: smooth; }
 }
 .lavender-mist   { 
     background-color: #D3D3FF; 
-    border: 1px solid black;
+    border: 1px solid #40382e;
  }
 .dusty-rose      {
     background-color: #DDA1A1; 
-    border: 1px solid black; 
+    border: 1px solid #40382e; 
   }
 .sage-green      { 
     background-color: #C5D1B9;
-    border: 1px solid black;
+    border: 1px solid #40382e;
    }
 
 .color-option:has(input:focus-visible) {
@@ -340,7 +335,7 @@ html { scroll-behavior: smooth; }
 }
 
 .specs h2 {
-    font-family: krona one;
+    font-family: var(--overskrift-font);
     font-size: 30px;
     color: #40382e;
     letter-spacing: 8px;
@@ -358,9 +353,6 @@ html { scroll-behavior: smooth; }
     padding: 30px 0;
     cursor: pointer;
     list-style: none;
-}
-
-.spec-group summary {
     transition: opacity 0.2s ease;
 }
 
@@ -368,12 +360,12 @@ html { scroll-behavior: smooth; }
     opacity: 0.65;
 }
 
-.spec-group summary ::marker {
+.spec-group summary::marker {
     display: none;
 }
 
 .spec-group summary span:first-child {
-    font-family: krona one;
+    font-family: var(--overskrift-font);
     font-size: 18px;
     color: #40382e;
     letter-spacing: 2px;
@@ -412,7 +404,7 @@ html { scroll-behavior: smooth; }
 }
 
 .spec-content p {
-    font-family: inria sans;
+    font-family: var(--brødtekst-font);
     font-size: 15px;
     line-height: 1.6;
     color: #40382e;
@@ -455,19 +447,15 @@ html { scroll-behavior: smooth; }
 }
 
 .app-info {
-    color: white;
-}
-
-.app-info h3 {
     font-family: var(--brødtekst-font);
     font-size: 26px;
     font-weight: 400;
     margin-bottom: 25px;
+    color: white;
 }
 
 .app-info p,
 .app-info li {
-    font-family: var(--brødtekst-font);
     font-size: 16px;
     line-height: 1.6;
 }
@@ -494,9 +482,9 @@ html { scroll-behavior: smooth; }
     margin-top: 30px;
 }
 
-.app-download h3 {
+.app-download p {
     font-family: var(--brødtekst-font);
-    font-size: 24px;
+    font-size: 20px;
     color: white;
     margin-bottom: 5px;
 }
@@ -552,17 +540,6 @@ footer {
     display: flex;
     flex-direction: column;
 }
-
-
-footer .logo {
-    font-size: 24px; 
-    letter-spacing: 2px; 
-    margin-bottom: 15px; 
-  }
-footer h2 { 
-    font-size: 14px; 
-    margin-bottom: 10px; 
-    letter-spacing: 1px; }
 
 footer p { 
     font-size: 13px; 
@@ -630,7 +607,6 @@ footer a:hover {
     grid-column: 1 / -1;
     text-align: center;
     width: 100%;
-    margin-top: 0px;
 }
 
 /* Media Queries */
@@ -714,14 +690,12 @@ footer a:hover {
     .lum {
     left: 50%;
     transform: translate(-91%, -50%);
-    letter-spacing: 10px;
     z-index: 3;
     }
 
     .ina {
         left: 50%;
         transform: translate(10%, -50%);
-        letter-spacing: 10px;
         z-index: 3;
     }
 
@@ -825,7 +799,7 @@ footer a:hover {
     transform: translateX(-10px);
     }
 
-    .app-download h3 {
+    .app-download p {
         font-size: 18px;
         color: #40382e;
         margin-bottom: 5px;
@@ -868,10 +842,6 @@ footer a:hover {
         pointer-events: auto;
     }
 
-    .footer-column summary::-webkit-details-marker {
-        display: none;
-    }
-
     .footer-column summary span:first-child {
         font-family: var(--brødtekst-font);
         font-size: 14px;
@@ -899,16 +869,6 @@ footer a:hover {
         text-align: center;
     }
 
-    .footer-description {
-        text-align: center;
-    }
-
-
-    .footer-brand .logo {
-        text-align: center;
-        margin-bottom: 20px;
-        order: 0;
-    }
 
     .footer-logo {
         align-items: center;
